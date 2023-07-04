@@ -1,5 +1,5 @@
 const fs=require('fs');
-const pug = require('pug');
+const pug=require('pug');
 
 let users=[];
 
@@ -21,7 +21,5 @@ function buildUserList()
     let html=pug.renderFile('layout/content.pug',data);
     fs.writeFileSync('index.html',html);    
 }
-
-
 
 buildUserList();
