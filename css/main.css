@@ -315,12 +315,19 @@ form ::-webkit-input-placeholder {
 @media screen and (min-width: 370px) and (max-width: 767px) {
   .table-body {
     font-size: 8px;
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
   }
 }
 .table-body .Company, .table-body .Country, .table-body .Customer, .table-body .Phone, .table-body .Email, .table-body .Status {
   font-family: 500;
   font-size: 14px;
   color: var(--color-text-invert);
+}
+@media screen and (min-width: 370px) and (max-width: 767px) {
+  .table-body .Company, .table-body .Country, .table-body .Customer, .table-body .Phone, .table-body .Email, .table-body .Status {
+    font-size: 8px;
+  }
 }
 .table-body .line {
   height: 1px;
@@ -346,7 +353,7 @@ form ::-webkit-input-placeholder {
 }
 @media screen and (min-width: 370px) and (max-width: 767px) {
   .table-body .button-choice {
-    width: 50px;
+    width: 40px;
     height: 15px;
     font-weight: 400;
     font-size: 8px;
