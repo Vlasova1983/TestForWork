@@ -1,0 +1,46 @@
+extends base
+
+mixin table(user)
+    each  curent in user           
+        case curent
+            when 'Active'
+                button(class="button-choice button-active") Active
+            when 'Inactive'
+                button(class="button-choice button-inactive") Inactive
+            default                
+                p(class=curent)= curent
+
+
+
+block content
+    .table-title
+        div 
+            h3 All Customers
+            p(class='subtitle') Active Members
+        form
+            input(type="text" placeholder="Search")
+            button(type="submit" class="search")
+
+ 
+    .table-body           
+        each user in users                                         
+            +table(user)
+            .line 
+    .pogination
+        p(class='pogination-text') Showing data 1 to 8 of  256K entries        
+        -let numberOfUsers=320;
+        -let numberORowsInContext=8;
+        -let numberOfButtonInPogination=numberOfUsers/numberORowsInContext;      
+        -let n=1;
+        .pogination-buttons
+            button 
+                img(src='../../icons/arrow-right.svg' class='arrow' strok='black')      
+            while n<4        
+                button #{n} 
+                -n++
+            p ...
+            button #{numberOfButtonInPogination}
+            button 
+                img(src='../../icons/arrow-left.svg' class='arrow' strok='black')
+
+    

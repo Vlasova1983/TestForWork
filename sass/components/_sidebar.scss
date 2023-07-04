@@ -1,0 +1,112 @@
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-column: span 1;
+    grid-row: span 9;
+    background-color: var(--color-fon);
+    height: 100vh;   
+    padding: 30px;
+    padding-bottom: 250px;
+
+    @media screen and (max-width: 1200px) {
+        width: 220px;        
+    }
+
+    @media screen  and (min-width: 370px) and (max-width:767px) {
+       display: none;
+    }
+}
+
+.sidebar-title{
+    position: relative;
+    display: flex;  
+    align-items: center;    
+    span{
+        position: absolute;
+        top:34px;
+        left: 260px;
+        font-weight: 500;
+        font-size: 10px;
+        color: var(--color-text-invert);
+
+        @media screen and (max-width: 1200px) {
+            left: 220px;
+        }
+    }
+}
+
+
+
+.sidebar-menu{
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    padding: 10px;
+
+    button{
+        position: relative;
+        border: none;
+        outline: none;
+        background: transparent;
+
+        font-weight: 500;
+        font-size: 14px;
+        color: var(--color-text-invert);
+        text-align: left; 
+
+        width: 250px;
+        height: 46px;
+        margin-bottom: 10px;             
+        padding-left:  40px;
+        cursor: pointer;
+
+        @media screen and (max-width: 1200px) {
+            width: 200px;
+            height: 35px;
+        }
+    }
+
+    button:hover{
+        background: var(--color-activ-button);
+        border-radius: 8px;     
+    }
+
+    .icon{
+        position: absolute;
+        left: 10px;
+        top: 12px;
+        width: 24px;
+        height: 24px; 
+        @media screen and (max-width: 1200px) {
+            top: 8px;
+        }
+    }
+
+    .arrow{
+        position: absolute;
+        right: 10px;
+        top: 16px;
+        width: 16px;
+        height: 16px;
+        @media screen and (max-width: 1200px) {
+            top: 8px;
+        }
+    }
+}
+
+.avatar{
+    display:flex;  
+    
+    .avatar-name{
+        font-weight: 500;
+        font-size: 14px;
+        margin-left: 10px;
+    }
+    span{
+        font-weight: 400;
+        font-size: 12px;
+        color:var(--color-text-invert)
+    }
+}
+

@@ -1,0 +1,401 @@
+:root {
+  --color-text: #292D32;
+  --color-text-invert:#B5B7C0;
+  --color-text-accent:#16C098;
+  --color-body:#FAFBFF;
+  --color-fon: #FFFFFF;
+  --color-button-fon:rgb(22, 192, 152,0.38);
+  --color-buttom-fon-invert: #FFC5C5;
+  --color-text-buttom:#008767;
+  --color-text-buttom-invert:#DF0404;
+  --color-activ-button:#5932EA;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  color: var(--color-text);
+  background-color: var(--color-body);
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+}
+@media screen and (min-width: 370px) and (max-width: 767px) {
+  .grid {
+    display: block;
+  }
+}
+
+.content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+  background-color: var(--color-fon);
+  margin: 0 70px;
+  padding: 30px;
+  grid-column: span 4;
+  grid-row: span 8;
+  height: 75vh;
+  width: 70vw;
+}
+@media screen and (min-width: 370px) and (max-width: 767px) {
+  .content-wrapper {
+    margin: 0;
+    padding: 10px;
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  grid-column: span 1;
+  grid-row: span 9;
+  background-color: var(--color-fon);
+  height: 100vh;
+  padding: 30px;
+  padding-bottom: 250px;
+}
+@media screen and (max-width: 1200px) {
+  aside {
+    width: 220px;
+  }
+}
+@media screen and (min-width: 370px) and (max-width: 767px) {
+  aside {
+    display: none;
+  }
+}
+
+.sidebar-title {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.sidebar-title span {
+  position: absolute;
+  top: 34px;
+  left: 260px;
+  font-weight: 500;
+  font-size: 10px;
+  color: var(--color-text-invert);
+}
+@media screen and (max-width: 1200px) {
+  .sidebar-title span {
+    left: 220px;
+  }
+}
+
+.sidebar-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 60px;
+  padding: 10px;
+}
+.sidebar-menu button {
+  position: relative;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--color-text-invert);
+  text-align: left;
+  width: 250px;
+  height: 46px;
+  margin-bottom: 10px;
+  padding-left: 40px;
+  cursor: pointer;
+}
+@media screen and (max-width: 1200px) {
+  .sidebar-menu button {
+    width: 200px;
+    height: 35px;
+  }
+}
+.sidebar-menu button:hover {
+  background: var(--color-activ-button);
+  border-radius: 8px;
+}
+.sidebar-menu .icon {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  width: 24px;
+  height: 24px;
+}
+@media screen and (max-width: 1200px) {
+  .sidebar-menu .icon {
+    top: 8px;
+  }
+}
+.sidebar-menu .arrow {
+  position: absolute;
+  right: 10px;
+  top: 16px;
+  width: 16px;
+  height: 16px;
+}
+@media screen and (max-width: 1200px) {
+  .sidebar-menu .arrow {
+    top: 8px;
+  }
+}
+
+.avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.avatar .avatar-name {
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 10px;
+}
+.avatar span {
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--color-text-invert);
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  font-weight: 500;
+  font-size: 24px;
+  grid-column: span 4;
+  grid-row: span 1;
+  margin: 30px 70px;
+}
+@media screen and (min-width: 370px) and (max-width: 767px) {
+  header {
+    font-weight: 400;
+    font-size: 12px;
+    margin: 0;
+    padding: 10px;
+  }
+}
+header .burger {
+  display: none;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+@media screen and (min-width: 370px) and (max-width: 767px) {
+  header .burger {
+    display: block;
+  }
+}
+
+.table-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 22px;
+}
+@media screen and (min-width: 370px) and (max-width: 767px) {
+  .table-title {
+    font-size: 16px;
+  }
+}
+.table-title .subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--color-text-accent);
+  margin-top: 10px;
+}
+
+form {
+  position: relative;
+  width: 216px;
+  height: 38px;
+  border-radius: 10px;
+  margin: 0;
+  background: var(--color-body);
+  color: var(--color-text-invert);
+}
+@media screen and (min-width: 370px) and (max-width: 767px) {
+  form {
+    width: 150px;
+    height: 25px;
+  }
+}
+form input,
+form .search {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+form input {
+  width: 216px;
+  height: 38px;
+  border-radius: 10px;
+  padding-left: 30px;
+  color: var(--color-text-invert);
+  font-weight: 400;
+  font-size: 12px;
+}
+form .search {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background: url("../../icons/search.svg");
+  cursor: pointer;
+}
+form ::-webkit-input-placeholder {
+  color: var(--color-text-invert);
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.table-body {
+  margin-top: 30px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  font-weight: 500;
+  font-size: 14px;
+}
+@media screen and (max-width: 1200px) {
+  .table-body {
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 370px) and (max-width: 767px) {
+  .table-body {
+    font-size: 8px;
+  }
+}
+.table-body .Company, .table-body .Country, .table-body .Customer, .table-body .Phone, .table-body .Email, .table-body .Status {
+  font-family: 500;
+  font-size: 14px;
+  color: var(--color-text-invert);
+}
+.table-body .line {
+  height: 1px;
+  background-color: var(--color-text-invert);
+  grid-column: span 6;
+}
+.table-body .button-choice {
+  font-weight: 500;
+  font-size: 14px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  width: 80px;
+  height: 30px;
+  cursor: pointer;
+}
+@media screen and (max-width: 1200px) {
+  .table-body .button-choice {
+    width: 60px;
+    height: 20px;
+    padding: 2px 8px;
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 370px) and (max-width: 767px) {
+  .table-body .button-choice {
+    width: 50px;
+    height: 15px;
+    font-weight: 400;
+    font-size: 8px;
+    padding: 0;
+  }
+}
+.table-body .button-active {
+  color: var(--color-text-buttom);
+  background-color: var(--color-button-fon);
+  border: 1px solid var(--color-text-buttom);
+}
+.table-body .button-inactive {
+  color: var(--color-text-buttom-invert);
+  background-color: var(--color-buttom-fon-invert);
+  border: 1px solid var(--color-text-buttom-invert);
+}
+
+.pogination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: var(--color-text-invert);
+  margin-top: 50px;
+  font-weight: 500;
+  font-size: 14px;
+}
+@media screen and (min-width: 370px) and (max-width: 767px) {
+  .pogination {
+    display: block;
+    text-align: center;
+  }
+}
+.pogination button {
+  margin-right: 5px;
+}
+@media screen and (min-width: 370px) and (max-width: 767px) {
+  .pogination button {
+    margin-top: 10px;
+  }
+}
+.pogination button:hover {
+  background: var(--color-activ-button);
+}
+.pogination p {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0 5px;
+}/*# sourceMappingURL=main.css.map */
