@@ -12,9 +12,9 @@ aside(class='sidebar')
             each  item in menu                                       
                 a(href="#" class='menu_item')= item.name
                     svg(class="menu_icon1")
-                        use(xlink:href="icons/icons.svg#" + item.name.toLowerCase())                                                                 
-                    .menu_icon2
-                                                        
+                        use(xlink:href="icons/icons.svg#" + item.name.toLowerCase()) 
+                    svg(class="menu_icon2")
+                        use(xlink:href="icons/icons.svg#chevron-right")                                                     
     .avatar_wrapper 
         .foto
             img(src='icons/avatar/avatar.png' alt='Users avatar')

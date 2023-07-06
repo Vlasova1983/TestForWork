@@ -246,7 +246,7 @@ body {
 
 .title_copyright {
   font-weight: 500;
-  font-size: 100px;
+  font-size: 10px;
   color: var(--color-text-invert);
 }
 
@@ -298,8 +298,6 @@ body {
 .menu_icon2 {
   width: 16px;
   height: 16px;
-  background: url("../../icons/chevron-right.svg");
-  background-position: center;
 }
 
 .avatar_wrapper {
@@ -430,13 +428,17 @@ body {
   left: 0;
   height: 24px;
   width: 24px;
-  background: url("../../icons/search.svg");
-  background-position: center;
+  padding: 0;
   cursor: default;
 }
 .search_button:focus {
   border: 1px solid var(--color-text-invert);
   border-radius: 8px;
+}
+
+.search_logo {
+  height: 24px;
+  width: 24px;
 }
 
 .content_body {
@@ -588,20 +590,12 @@ body {
   padding: 0 8px 0 0;
 }
 
-.arrow_left {
-  background: url("../../icons/arrow-left.svg");
-  background-position: center;
+.paginator_next {
+  height: 26px;
+  width: 24px;
 }
-.arrow_left:hover {
-  background: url("../../icons/arrow-left.svg");
-}
-
-.arrow_right {
-  background: url("../../icons/arrow-right.svg");
-  background-position: center;
-}
-.arrow_right:hover {
-  background: url("../../icons/arrow-right.svg");
+.paginator_next:hover {
+  background: #F5F5F5;
 }
 
 .footer {

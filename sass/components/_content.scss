@@ -95,9 +95,9 @@
 
     height: 24px;
     width: 24px;
-
-    background: url('../../icons/search.svg');
-    background-position: center;
+    
+    padding: 0;
+    
     cursor: default;
 
     &:focus{
@@ -106,7 +106,10 @@
     }
 
 } 
-
+.search_logo{
+    height: 24px;
+    width: 24px;
+}
 .content_body{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -264,20 +267,12 @@
     padding: 0 8px 0 0;
 }
 
-.arrow_left{   
-    background: url('../../icons/arrow-left.svg');
-    background-position: center; 
-    
+.paginator_next{
+    height: 26px;
+    width: 24px;
     &:hover {
-        background: url('../../icons/arrow-left.svg');
+        background:#F5F5F5;       
     }
 }
 
-.arrow_right {    
-    background: url('../../icons/arrow-right.svg');
-    background-position: center; 
-    &:hover {
-            background: url('../../icons/arrow-right.svg');
-    }
-}
 

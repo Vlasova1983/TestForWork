@@ -21,7 +21,9 @@ block content
             form(class='search')
                 label(class='search_lable')
                     input(type="text" placeholder="Search" class='search_input')
-                button(type="submit" class="search_button") 
+                button(type="submit" class="search_button")
+                    svg(class="search_logo")
+                        use(xlink:href="icons/icons.svg#search") 
         .content_body           
             each user in users                                         
                 +user(user)
@@ -33,13 +35,17 @@ block content
             -let numberOfButtonInPogination=numberOfUsers/numberORowsInContext;      
             -let n=1;
             .buttons_wrapper
-                button(type='button' class="paginator_page arrow_left")                              
+                button(type='button' class="paginator_page")
+                    svg(class="paginator_next")
+                        use(xlink:href="icons/icons.svg#arrow-left")                              
                 while n<4        
                     button(type='button' class="paginator_page") #{n} 
                     -n++
                 p(class="pixel") ...
                 button(type='button' class="paginator_page") #{numberOfButtonInPogination}
-                button(type='button' class="paginator_page arrow_right")
+                button(type='button' class="paginator_page")
+                    svg(class="paginator_next")
+                        use(xlink:href="icons/icons.svg#arrow-right")
                     
                     
 
