@@ -264,19 +264,19 @@
 }
 
 .arrow_left{   
-    background: url('../../icons/arrow_left.svg');
+    background: url('../../icons/arrow-left.svg');
     background-position: center; 
     
     &:hover {
-        background: url('../../icons/arrow_left1.svg');
+        background: url('../../icons/arrow-left.svg');
     }
 }
 
 .arrow_right {    
-    background: url('../../icons/arrow_right.svg');
+    background: url('../../icons/arrow-right.svg');
     background-position: center; 
     &:hover {
-            background: url('../../icons/arrow_right1.svg');
+            background: url('../../icons/arrow-right.svg');
     }
 }
 
