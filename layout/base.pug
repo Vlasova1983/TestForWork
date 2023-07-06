@@ -3,12 +3,11 @@ html
     head
         include  includes/head  
         title Тестовое задание      
-    body(class='grid')
-        include  includes/sidebar 
-        include  includes/header
-                       
-        .content-wrapper 
-            block content         
-
-      
+    body(class='grid')        
+        include  includes/header                                
+        main(class='main')             
+            block content
+        include  includes/sidebar             
+        include  includes/footer 
+        
         

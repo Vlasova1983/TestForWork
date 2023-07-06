@@ -1,52 +1,37 @@
-h1,h2,h3,p {
-    margin: 0;
+@import "../utils/breakpoints";
+
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    // font-family: 'Poppins', 'Times New Roman', sans-serif;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    
+    font-family: 'Poppins','Times New Roman';
     font-weight: 600;
     font-size: 26px;
 
     color: var(--color-text);
-    background-color:var(--color-body);  
-    
-    margin: 0;   
-    
+    background-color:var(--color-body); 
+      
 }
 
 .grid{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(9, 1fr);
-    grid-column-gap: 0;
-    grid-row-gap: 0;
-
-    @media screen and (min-width: 370px) and (max-width:767px) {
-        display:block;
-    }
-}
-
-
-.content-wrapper {    
-    display: flex;
-    flex-direction: column;
-
-    border-radius: 10px;
-    background-color: var(--color-fon);
-
-    margin: 0 70px;
-    padding:30px;
-
-    grid-column: span 4;
-    grid-row: span 8;
-
-    height: 75vh; 
-    width: 70vw; 
+    display: grid;    
     
-    @media screen and (min-width: 370px) and (max-width:767px) {
-        margin: 0;
-        padding: 10px;
-        height: 100vh;
-        width: 100vw;
-    }
+
+    @include _mobile {
+        display: block;
+    }    
 }
+
+.main{
+    grid-column: col 2/ col 3;    
+}
+
+

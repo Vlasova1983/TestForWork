@@ -1,46 +1,46 @@
 extends base
 
-mixin table(user)
+mixin user(user)
     each  curent in user           
         case curent
             when 'Active'
-                button(class="button-choice button-active") Active
+                button(type='button' class="choice active") Active
             when 'Inactive'
-                button(class="button-choice button-inactive") Inactive
+                button(type='button' class="choice inactive") Inactive
             default                
-                p(class=curent)= curent
+                p(class=curent.toLowerCase())= curent
 
 
 
 block content
-    .table-title
-        div 
-            h3 All Customers
-            p(class='subtitle') Active Members
-        form
-            input(type="text" placeholder="Search")
-            button(type="submit" class="search")
+    .content_wrapper
+        .title_wrapper
+            div(class='text_box') 
+                h3(class='title') All Customers
+                p(class='subtitle') Active Members
+            form(class='search')
+                label(class='search_lable')
+                    input(type="text" placeholder="Search" class='search_input')
+                button(type="submit" class="search_button") 
+        .content_body           
+            each user in users                                         
+                +user(user)
+                .line 
+        .paginator
+            p(class='paginator_name') Showing data 1 to 8 of  256K entries        
+            -let numberOfUsers=320;
+            -let numberORowsInContext=8;
+            -let numberOfButtonInPogination=numberOfUsers/numberORowsInContext;      
+            -let n=1;
+            .buttons_wrapper
+                button(type='button' class="paginator_page arrow_left")                              
+                while n<4        
+                    button(type='button' class="paginator_page") #{n} 
+                    -n++
+                p(class="pixel") ...
+                button(type='button' class="paginator_page") #{numberOfButtonInPogination}
+                button(type='button' class="paginator_page arrow_right")
+                    
+                    
 
- 
-    .table-body           
-        each user in users                                         
-            +table(user)
-            .line 
-    .pogination
-        p(class='pogination-text') Showing data 1 to 8 of  256K entries        
-        -let numberOfUsers=320;
-        -let numberORowsInContext=8;
-        -let numberOfButtonInPogination=numberOfUsers/numberORowsInContext;      
-        -let n=1;
-        .pogination-buttons
-            button 
-                img(src='icons/arrow-right.svg' class='arrow' strok='black')      
-            while n<4        
-                button #{n} 
-                -n++
-            p ...
-            button #{numberOfButtonInPogination}
-            button 
-                img(src='icons/arrow-left.svg' class='arrow' strok='black')
 
-    

@@ -1,9 +1,11 @@
-@import "../sass//utils/variable";
+@import "../sass/utils/reset.scss";
+@import "../sass/utils/variable";
 
 @import "../sass/components/base";
-@import "../sass/components/sidebar";
 @import "../sass/components/header";
+@import "../sass/components/sidebar";
 @import "../sass/components/content";
+@import "../sass/components/footer";
 
 
 

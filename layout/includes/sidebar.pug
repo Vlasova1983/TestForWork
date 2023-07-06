@@ -1,21 +1,22 @@
--let menu=[{name:'Dashboard',url:'icons/key-square.svg'},{name:'Product',url:'icons/3d-square.svg'},{name:'Customers',url:'icons/user-square.svg'},{name:'Income',url:'icons/wallet-money.svg'},{name:'Promote',url:'icons/discount-shape.svg'},{name:'Help',url:'icons/message-question.svg'}]
+-let menu=[{name:'Dashboard'},{name:'Product'},{name:'Customers'},{name:'Income'},{name:'Promote'},{name:'Help'}]
 
-
-
-
-aside 
-    div
-        .sidebar-title
-            include ../../icons/setting.svg
-            h2 Dashboard
-            span v.01 
-        .sidebar-menu 
-            each  item in menu  
-                button  #{item.name}
-                    img(src=item.url class='icon')
-                    img(src='icons/chevron-right.svg' class='arrow')
-    .avatar 
-        img(src='icons/avatar/avatar.png')
-        .avatar-name            
-            p Evano
-            span Project Manager
+aside(class='sidebar') 
+    div(class='sidebar_wrapper')
+        .sidebar_title_wrapper
+            .logo
+            .sidebar_title
+                h1(class="title_name") Dashboard
+                span(class='title_copyright') v.01 
+        .menu 
+            each  item in menu                                       
+                a(href="#" class='menu_item')= item.name
+                    svg(class="menu_icon1")
+                        use(xlink:href="icons/icons.svg#" + item.name.toLowerCase())                                                                 
+                    .menu_icon2
+                                                        
+    .avatar_wrapper 
+        .foto
+            img(src='icons/avatar/avatar.png' atl='Users avatar')
+        .avatar            
+            p(class="avatar_name") Evano
+            span(class='avatar_prof')  Project Manager
