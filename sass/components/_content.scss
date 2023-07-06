@@ -7,8 +7,12 @@
     border-radius: 10px;
     background-color: var(--color-fon);
 
-    margin: 0 30px;
-    padding: 30px; 
+    margin: 0 70px;
+    padding: 30px 38px; 
+
+    @include _tablet {
+        margin: 0;
+    }
 
     @include _mobile {
         margin: 0;
@@ -114,10 +118,10 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
    
-    grid-column-gap: 15px;
-    grid-row-gap: 15px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
 
-    margin-top: 50px; 
+    margin-top: 40px; 
     width: 100%;   
 
     font-weight: 500;
@@ -130,13 +134,9 @@
         font-size: 10px;
     }    
 
-    @include _mobile {        
-        grid-column-gap: 2px;
-        grid-row-gap: 2px;
-
+    @include _mobile {
         font-size: 8px;
     }
-
     
 
     .company ,.country,.customer,.phone,.email,.status{
@@ -276,3 +276,9 @@
 }
 
 
+.text{
+    display: flex;  
+    overflow: hidden;
+    white-space: nowrap;
+    align-items: center;    
+}

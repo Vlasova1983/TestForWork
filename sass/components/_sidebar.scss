@@ -13,7 +13,12 @@
     
     background-color: var(--color-fon);
     height: 100vh;   
-    padding: 30px;    
+    padding: 28px 36px 40px 36px;
+    
+    @include _tablet {
+       width: 70%;
+    }
+    
 
     @include _mobile {
         display: none;
@@ -59,11 +64,11 @@
     align-items: center;
     text-decoration: none;
 
-    width: 80%;
-    height: 40px;
+    width: 250px;
+    height: 46px;
 
     margin-bottom: 25px;
-    padding-left: 30px;
+    padding-left: 50px;
     border-radius: 8px; 
 
     font-weight: 500;
@@ -85,8 +90,8 @@
 
 .menu_icon1 {
     position: absolute;
-    left: 2px; 
-    top: 8px;
+    left: 15px; 
+    top: 10px;
     width: 24px;
     height: 24px;   
     
@@ -95,7 +100,8 @@
 
 .menu_icon2 {
     width: 16px;
-    height: 16px;     
+    height: 16px;
+    margin-right: 10px;     
 }
 
 
