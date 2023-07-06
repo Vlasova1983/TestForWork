@@ -101,7 +101,8 @@
     cursor: default;
 
     &:focus{
-        background: url('../../icons/search1.svg');        
+        border: 1px solid var(--color-text-invert);
+        border-radius: 8px;       
     }
 
 } 

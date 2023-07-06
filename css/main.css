@@ -232,7 +232,6 @@ body {
 .logo {
   width: 37px;
   height: 37px;
-  background: url("../../icons/setting.svg");
 }
 
 .sidebar_title {
@@ -247,7 +246,7 @@ body {
 
 .title_copyright {
   font-weight: 500;
-  font-size: 10px;
+  font-size: 100px;
   color: var(--color-text-invert);
 }
 
@@ -436,7 +435,8 @@ body {
   cursor: default;
 }
 .search_button:focus {
-  background: url("../../icons/search1.svg");
+  border: 1px solid var(--color-text-invert);
+  border-radius: 8px;
 }
 
 .content_body {
