@@ -220,7 +220,7 @@
     align-content: center;
     color: var(--color-text-invert);
 
-    margin-top: 50px;
+    margin-top: 32px;
 
     font-weight: 500;
     font-size: 14px;
@@ -235,6 +235,7 @@
     display: flex;
     justify-content: space-between;    
     align-items:flex-end;
+    // margin-right: -12px;
 
     @include _mobile {
         justify-content: center;        
@@ -250,7 +251,7 @@
     
     color:#404B52;
 
-    margin-right: 8px;
+    margin-right: 12px;
     padding:0;
 
     @include _mobile {

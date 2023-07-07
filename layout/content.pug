@@ -13,14 +13,14 @@ mixin user(user)
 
 
 block content
-    .content_wrapper
+    section(class="content_wrapper")
         .title_wrapper
-            div(class='text_box') 
+            .text_box 
                 h3(class='title') All Customers
                 p(class='subtitle') Active Members
             form(class='search')
-                label(class='search_lable')
-                    input(type="text" placeholder="Search" class='search_input')
+                label(class='search_lable' for='search')
+                input(class='search_input' id='search' type="text" placeholder="Search")
                 button(type="submit" class="search_button")
                     svg(class="search_logo")
                         use(xlink:href="icons/icons.svg#search") 

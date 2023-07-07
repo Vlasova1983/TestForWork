@@ -1,4 +1,12 @@
--let menu=[{name:'Dashboard'},{name:'Product'},{name:'Customers'},{name:'Income'},{name:'Promote'},{name:'Help'}]
+-let menu=['Dashboard','Product','Customers','Income','Promote','Help']
+
+mixin menu(item)             
+    a(href="#" class='menu_link')= item
+        svg(class="menu_icon1")
+            use(xlink:href="icons/icons.svg#" + item.toLowerCase()) 
+        svg(class="menu_icon2")
+            use(xlink:href="icons/icons.svg#chevron-right")                            
+
 
 aside(class='sidebar') 
     div(class='sidebar_wrapper')
@@ -8,13 +16,12 @@ aside(class='sidebar')
             .sidebar_title
                 h1(class="title_name") Dashboard
                 span(class='title_copyright') v.01 
-        .menu 
-            each  item in menu                                       
-                a(href="#" class='menu_item')= item.name
-                    svg(class="menu_icon1")
-                        use(xlink:href="icons/icons.svg#" + item.name.toLowerCase()) 
-                    svg(class="menu_icon2")
-                        use(xlink:href="icons/icons.svg#chevron-right")                                                     
+        nav(class='nav')
+            ul(class='menu')
+                each  item in menu
+                    li(class='menu_item')
+                        +menu(item)                                       
+                                         
     .avatar_wrapper 
         .foto
             img(src='icons/avatar/avatar.png' alt='Users avatar')
