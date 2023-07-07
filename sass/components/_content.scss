@@ -53,12 +53,7 @@
     border-radius: 10px;
     margin: 0;
     background: var(--color-body);
-    color: var(--color-text-invert);
-
-    @include _mobile {
-        width: 150px;
-        height: 25px;
-    }   
+    color: var(--color-text-invert);   
 }
 
 .search_input,
@@ -234,16 +229,17 @@
 .buttons_wrapper{
     display: flex;
     justify-content: space-between;    
-    align-items:flex-end;
-    // margin-right: -12px;
+    align-items:flex-end;   
 
     @include _mobile {
-        justify-content: center;        
-    }
+        justify-content: center;
+        margin-top: 20px;        
+    }     
 }
 
 
-.paginator_page {    
+.paginator_page {
+    position: relative;    
     border: none;
     border-radius: 4px;
     height: 26px;
@@ -253,10 +249,6 @@
 
     margin-right: 12px;
     padding:0;
-
-    @include _mobile {
-        margin-top: 20px;
-    }
 
     &:hover {
         background: var(--color-activ-button);
@@ -268,12 +260,21 @@
     padding: 0 8px 0 0;
 }
 
-.paginator_next{
-    height: 26px;
-    width: 24px;
+.page_arrow{
+    position: absolute;
+    top: 7px;;
+    left: 6px;
+
+    height: 12px;
+    width: 10px;
     &:hover {
-        background:#F5F5F5;       
+        background: var(--color-activ-button);
+        stroke: white;      
     }
+}
+
+.page_next{    
+    margin-right: 0;    
 }
 
 

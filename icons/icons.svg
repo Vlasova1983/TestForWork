@@ -56,5 +56,11 @@
     <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#7E7E7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M21 21L16.65 16.65" stroke="#7E7E7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol>
+<symbol id="icon-arrow-left" viewBox="0 0 32 32" >
+    <path fill="#404b52" style="fill: var(--color3, #404b52)" d="M6.144 4.315h7.899l12.617 12.453-12.617 12.453h-7.899l12.672-12.453-12.672-12.453z"></path>
+</symbol>
+<symbol id="icon-arrow-right" viewBox="0 0 32 32" >
+    <path fill="#404b52" style="fill: var(--color3, #404b52)" d="M17.993 29.221l-12.617-12.453 12.617-12.453h7.899l-12.672 12.453 12.672 12.453h-7.899z"></path>
+</symbol>
 </defs>
 </svg>

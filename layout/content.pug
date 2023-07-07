@@ -36,16 +36,16 @@ block content
             -let n=1;
             .buttons_wrapper
                 button(type='button' class="paginator_page")
-                    svg(class="paginator_next")
-                        use(xlink:href="icons/icons.svg#arrow-left")                              
+                    svg(class="page_arrow")
+                        use(xlink:href="icons/icons.svg#icon-arrow-right")                              
                 while n<4        
                     button(type='button' class="paginator_page") #{n} 
                     -n++
                 p(class="pixel") ...
                 button(type='button' class="paginator_page") #{numberOfButtonInPogination}
-                button(type='button' class="paginator_page")
-                    svg(class="paginator_next")
-                        use(xlink:href="icons/icons.svg#arrow-right")
+                button(type='button' class="paginator_page page_next")
+                    svg(class="page_arrow")
+                        use(xlink:href="icons/icons.svg#icon-arrow-left")
                     
                     
 
